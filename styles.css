@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: #999999;
+  font-family: helvetica;
+  }
+/* ESTILOS GENERALES */
+
+.fuente-clara {
+  color: #ddd8d8;
+}
+
+.fuente-oscura {
+  color: #22211f;
+}
+
+.fuente-acento {
+  color: #f1eeee;
+}
+
+nav ul li {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: #eeeeee;
+}
+/* ENCABEZADO */
+
+header {
+  background-color: rgba(34, 33, 31, 0.85);
+  width: 100%;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+.logo a:hover{
+  border-radius: 23px;
+  background-color: gray;
+  color: white;
+  font-size: 25px;
+  padding: 7px 7px;
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+
+header nav {
+  height: 80px;
+  float: right;
+}
+
+nav ul.menu {
+  float: right;
+}
+
+nav ul.menu li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul.menu li a:hover {
+  border-radius: 10px ;
+  background-color: gray;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 7px 7px;
+}
+
+/* MENU */
+
+.checkbtn {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Imagen*/
+.imagen {
+  width: 100%;
+  height: 450px;
+}
+
+/*Main*/
+
+main {
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: 450px;
+}
+/* section */
+section {
+  align-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.616);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 100px;
+  position: relative;
+  width: 100%;
+}
+ul .listado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 10px;
+}
+ul .listado {
+  font-family: helvetica;
+}
+.seccion0 {
+  width: 49.9%;
+  float: inline-end;
+}
+.seccion1 {
+  width: 49.9%;
+  float: inline-start;
+  display: flex;
+  align-items: center;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+.titulo1 {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px ;
+}
+
+/*footer*/
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contenedor-footer nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-footer nav h1 {
+  color: black;
+  font-size: 2em;
+  font-family: "Tangerine", cursive;
+  margin-right: 1px;
+}
+.contenedor-footer nav ul {
+  display: flex;
+  align-content: center;
+  list-style: none;
+  gap: 1px;
+  margin: 1px;
+}
+.contenedor-footer nav ul li a {
+  color: black;
+  font-size: 1.2em;
+  padding: 0.3em;
+  border-radius: 0.5em;
+}
+.contenedor-footer nav ul li a {
+  background-color:gray;
+}
+
+.contenedor-footer .gracias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-footer .gracias p {
+  color: black;
+  margin: 40px;
+  font-size: 1em;
+  font-family: "Indie Flower", cursive;
+}
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  header {
+    background-color: rgb(129, 129, 129);
+  }
+
+  .checkbtn {
+    display: block;
+    
+  }
+   .logo {
+    color: black;
+   }
+   .logo a:hover {
+    background-color: white;
+    color: black;
+   }
+  .navbar {
+    height: 0vh;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    text-align: center;
+
+    transition: all 0.5s;
+    overflow: hidden;
+  }
+
+  .navbar ul.menu {
+    flex-direction: column;
+    float: none;
+    display: flex;
+    width: 174px;
+    margin: 0 auto;
+    opacity: 0;
+  }
+
+  .navbar ul.menu li a:hover {
+    color: #f8f6f2;
+  }
+  /* ACTIVE */
+  .navbar.active {
+    height: 100vh;
+  }
+
+  .navbar.active ul.menu {
+    opacity: 1;
+  }
+  section {
+    width: 100%;
+    height: 100%; 
+    padding: 20px;
+    margin: 10px;
+  }
+  .seccion0 {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+ 
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .imagen {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+
+
+
+  
+ 
+
+
+
